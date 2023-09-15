@@ -30,6 +30,7 @@ public record PessoaRequestDto(
 ) {
         public Pessoa toEntity() {
                 return Pessoa.builder()
+                        .id(UUID.randomUUID())
                         .apelido(apelido)
                         .nome(nome)
                         .nascimento(nascimento)
